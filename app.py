@@ -7,4 +7,4 @@ def subtract(a, b):
 
 
 def application_message():
-    return "Calculator - Develop Version"
+    return "Calculator - Resolved Version"
