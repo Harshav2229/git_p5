@@ -7,4 +7,4 @@ def subtract(a, b):
 
 
 def application_message():
-    return "Gitflow Calculator"
+    return "Calculator - Feature Version"
