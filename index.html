@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gitflow Calculator</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;font-family:Inter,Arial,sans-serif;background:linear-gradient(135deg,#0f172a,#1e293b);color:#f8fafc}.card{width:min(420px,92vw);padding:28px;border-radius:22px;background:#ffffff;color:#0f172a;box-shadow:0 20px 60px #0005}h1{margin:0 0 8px}.sub{color:#64748b;margin-bottom:22px}.display{font-size:30px;font-weight:700;text-align:right;padding:18px;background:#f1f5f9;border-radius:14px;margin-bottom:16px;min-height:70px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}button,input{font:inherit}input{width:100%;padding:14px;border:1px solid #cbd5e1;border-radius:12px;margin-bottom:12px}button{padding:14px;border:0;border-radius:12px;cursor:pointer;background:#2563eb;color:white;font-weight:700}button.secondary{background:#e2e8f0;color:#0f172a}.result{margin-top:16px;padding:14px;border-radius:12px;background:#ecfdf5;color:#166534;font-weight:700;min-height:48px}.footer{margin-top:18px;font-size:12px;color:#64748b;text-align:center}</style>
+</head>
+<body>
+<main class="card"><h1>Gitflow Calculator</h1><div class="sub">Real-world web application</div>
+<input id="a" type="number" step="any" placeholder="First number"><input id="b" type="number" step="any" placeholder="Second number">
+<div class="grid"><button onclick="calculate('+')">Add</button><button onclick="calculate('-')">Subtract</button><button class="secondary" onclick="clearAll()">Clear</button><button class="secondary" onclick="location.reload()">Reset</button></div>
+<div id="result" class="result">Enter two numbers.</div><div class="footer">Gitflow + Pytest + Flake8 + GitHub Actions</div></main>
+<script>function calculate(op){const a=Number(document.getElementById('a').value),b=Number(document.getElementById('b').value),r=document.getElementById('result');if(document.getElementById('a').value===''||document.getElementById('b').value===''){r.textContent='Please enter both numbers.';return}r.textContent='Result: '+(op==='+'?a+b:a-b)}function clearAll(){document.getElementById('a').value='';document.getElementById('b').value='';document.getElementById('result').textContent='Enter two numbers.'}</script>
+</body></html>
